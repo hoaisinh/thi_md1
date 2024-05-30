@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    let tuSoThuNhat = +prompt("Nhập tử số thứ nhất");
+    let mauSoThuNhat = +prompt("Nhập mẫu số thứ nhất");
+    let tuSoThuHai = +prompt("Nhập tử số thứ hai");
+    let mauSoThuHai = +prompt("Nhập mẫu số thứ hai");
+
+    let phanSoThuNhat = Array(tuSoThuNhat,mauSoThuNhat);
+    let phanSoThuHai = Array(tuSoThuHai,mauSoThuHai);
+
+    function soSanhPhanSo(a,b){
+        let mauSo = a[1]*b[1];
+        let tuSo_a = a[0]*b[1];
+        let tuSo_b = a[1]*b[0];
+
+        if(tuSo_a == tuSo_b){
+            return true;
+        }else{
+            return false
+        }
+    }
+
+    let result = soSanhPhanSo(phanSoThuNhat,phanSoThuHai);
+    
+    if(result){
+        document.write("<h1 style='text-align:center'>"+phanSoThuNhat[0]+"/"+phanSoThuNhat[1]+" và "
+           + phanSoThuHai[0]+"/"+phanSoThuHai[1]+" là "+"Hai phân số bằng nhau</h1>");
+    }else{
+        document.write("<h1 style='text-align:center'>"+phanSoThuNhat[0]+"/"+phanSoThuNhat[1]+" và "
+           + phanSoThuHai[0]+"/"+phanSoThuHai[1]+" là "+"Hai phân số không bằng nhau</h1>");
+    }
+    
+
+</script>

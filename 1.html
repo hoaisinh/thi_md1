@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let a = Array();
+    let n = +prompt('Nhập tổng số phần tử của mảng');
+    for(;n>50;){
+        alert("Số phần tử của mảng không được lớn hơn 50");
+         n = +prompt('Nhập tổng số phần tử của mảng');
+         if(n<=50){
+            break;
+         }
+    }
+    for(let i =0; i<n; i++){
+        let num = +prompt("Nhập phần tử thứ "+ (i+1));
+        a.push(num);
+    }
+    document.write("Mảng a:" +a+"<br>");
+
+
+    let b = Array();
+    for(j = 0; j<a.length;j++){
+        let temp = a[j];
+        console.log(temp);
+        let count = 0;
+        for(let k = 2; k < temp; k++){
+            if(temp % k === 0){
+                count += 1;
+            }
+        }
+        if(count === 0&&temp !== 1){
+            b.push(temp);
+        }
+    }
+    document.write("Mảng b:" +b);
+</script>

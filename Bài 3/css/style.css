@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+body {
+  width: 100%;
+  background-color: rgb(212, 212, 212);
+}
+header {
+  width: 100%;
+  padding: 8px 5%;
+  color: white;
+  background-color: #000055;
+  font-weight: 500;
+  font-size: 22px;
+  position: fixed;
+  top: 0;
+}
+.product {
+  width: 90%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+}
+.prdHead {
+  font-weight: bold;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  background-color: #5e5e5e;
+  color: white;
+  margin-bottom: 12px;
+}
+.productList:nth-child(even) {
+  background-color: #d7d7d7;
+}
+.productList {
+  padding-bottom: 3px;
+  padding-top: 3px;
+  transition: all 0.3s;
+}
+h1,
+h2 {
+  color: #000055;
+  font-size: 30px;
+  margin-left: -25px;
+}
+.editBar {
+  padding-left: 0;
+  padding-right: 0;
+}
+.crudHere button {
+  border: unset;
+  margin-right: 8px;
+  background-color: unset;
+}
+.productList:hover {
+  background-color: rgb(36, 1, 151);
+}
+.productList:hover * {
+  color: white;
+}
+.hidePopup {
+  height: 0;
+}
+#popup {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: 999;
+  background-color: #00000073;
+  top: 0;
+  bottom: 0;
+}
+.showPopup {
+  height: auto;
+}
+#popupContent {
+  background-color: white;
+  width: 42%;
+  position: fixed;
+  right: 29%;
+  top: 150px;
+  border-radius: 12px;
+
+  height: 0;
+  transition: height 0.5s;
+}
+#viewDetailProduct,
+#editProduct,
+#addProduct {
+  height: 0;
+  overflow: hidden;
+}
+.editBar {
+  height: fit-content;
+}
